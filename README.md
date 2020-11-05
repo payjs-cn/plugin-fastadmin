@@ -3,7 +3,7 @@ Fastadmin 对接 PAYJS 插件
 
 ### 安装方法
 
-1.下载本代码的zip包，命名为 payjs-1.0.0.zip
+1.下载本代码的zip包，命名为 payjs-1.0.0.zip。 [下载地址](https://github.com/payjs-cn/plugin-fastadmin/archive/main.zip)
 
 2.登录fastadmin后台，点击左侧菜单“插件管理”，点击会员信息，先登录。
 
