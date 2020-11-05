@@ -1,0 +1,65 @@
+<style>
+    .table-adminlog tr td {
+        word-break: break-all;
+    }
+</style>
+<table class="table table-striped table-adminlog">
+    <thead>
+    <tr>
+        <th width="100">{:__('Title')}</th>
+        <th>{:__('Content')}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>支付方式</td>
+        <td>{:getPayChannelName($row['type'])}</td>
+    </tr>
+    <tr>
+        <td>订单号</td>
+        <td>{$row['out_trade_no']}</td>
+    </tr>
+    <tr>
+        <td>订单标题</td>
+        <td>{$row['subject']}</td>
+    </tr>
+    <tr>
+        <td>payjs订单号</td>
+        <td>{$row['outer_tid']}</td>
+    </tr>
+    <tr>
+        <td>支付流水号</td>
+        <td>{$row['transaction_tid']}</td>
+    </tr>
+    <tr>
+        <td>订单金额</td>
+        <td>￥ {$row['total_fee']} 元</td>
+    </tr>
+    <tr>
+        <td>支付时间</td>
+        <td>{$row['pay_at']}</td>
+    </tr>
+    <tr>
+        <td>支付者信息</td>
+        <td>{$row['buyer_info']}</td>
+    </tr>
+    <tr>
+        <td>订单状态</td>
+        <td>{:getPayStatus($row['status'])}</td>
+    </tr>
+    <tr>
+        <td>创建时间</td>
+        <td>{:date('Y-m-d H:i:s',$row['created_at'])}</td>
+    </tr>
+    <tr>
+        <td>更新时间</td>
+        <td>{:date('Y-m-d H:i:s',$row['updated_at'])}</td>
+    </tr>
+    </tbody>
+</table>
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>
